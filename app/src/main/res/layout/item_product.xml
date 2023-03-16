@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:elevation="20dp"
+    android:layout_margin="10dp"
+    android:id="@+id/item_product_root_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shape_corner100dp_strokeshadow2dp"
+    android:layout_height="290dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent=".9"
+        app:layout_constraintWidth_percent=".95">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHeight_percent=".8"
+            android:id="@+id/item_product_image"/>
+        <TextView
+            android:id="@+id/item_product_title"
+            android:textColor="#767676"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_percent=".65"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_product_image"
+            android:text="Lshape Interior Kitchen L shaeped I shaped U haped"
+            android:textStyle="bold"
+            android:autoSizeTextType="uniform"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#2A2A2A"
+            android:text="25000"
+            android:textSize="30sp"
+            android:id="@+id/item_product_price"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="#BB3542"
+            app:layout_constraintRight_toLeftOf="@id/item_product_price"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="25sp"
+            android:layout_margin="5dp"
+            android:text="₹"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

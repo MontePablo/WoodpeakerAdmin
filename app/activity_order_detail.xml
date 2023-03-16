@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".OrderDetail">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="order details"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/textView"/>
+    <ImageView
+        android:layout_margin="8dp"
+        android:id="@+id/order_detail_image"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent=".4"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView"/>
+    <TextView
+        android:layout_margin="8dp"
+        android:id="@+id/order_detail_title"
+        android:layout_width="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"
+        android:text="fix your home apliance at very low price"
+        app:layout_constraintLeft_toRightOf="@id/order_detail_image"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="addons"
+        android:id="@+id/textview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_detail_image"
+        android:layout_margin="8dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addons_layout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview"
+        android:orientation="horizontal" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_margin="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview"
+        android:text="price"/>
+    <TextView
+        android:id="@+id/order_detail_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="85"
+        app:layout_constraintTop_toBottomOf="@id/textview"
+        app:layout_constraintLeft_toRightOf="@id/textView2"
+        android:layout_margin="8dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:text="rupees"
+        app:layout_constraintLeft_toRightOf="@id/order_detail_price"
+        app:layout_constraintTop_toBottomOf="@id/textview"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/order_detail_price"
+        android:id="@+id/order_detail_dateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10.07.2021 17:54"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="212dp" />
+
+    <TextView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_detail_dateTime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="payment id: fh53h355h43"
+        android:id="@+id/paymentStatus"/>
+    <TextView
+        android:id="@+id/order_detail_delivery_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="shipped\n reached kolkata"
+        android:textColor="#7B07DD"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/paymentStatus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="325dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

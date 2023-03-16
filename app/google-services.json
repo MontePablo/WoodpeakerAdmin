@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "427980564613",
+    "project_id": "woodpeaker-39311",
+    "storage_bucket": "woodpeaker-39311.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:427980564613:android:640b521156aa35da5d61ec",
+        "android_client_info": {
+          "package_name": "com.example.woodpeakeradmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "427980564613-29t7b799ekh4rd7blf1b22h7nnja030s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACkBSuHL3XLmJsNQnVERPY3v_7ELRANgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "427980564613-29t7b799ekh4rd7blf1b22h7nnja030s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
