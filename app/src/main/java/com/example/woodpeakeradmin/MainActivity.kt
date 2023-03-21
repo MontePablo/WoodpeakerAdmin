@@ -9,11 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
 import android.provider.Settings
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.woodpeakeradmin.Daos.FirebaseDao
+import com.example.woodpeakeradmin.Daos.RealtimeDatabaseDao
 import com.example.woodpeakeradmin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -117,6 +119,9 @@ class MainActivity : AppCompatActivity() {
         FirebaseDao.auth.signOut()
         finish()
         startActivity(Intent(this, Login::class.java))
+    }
+    fun demo(view: View){
+        RealtimeDatabaseDao.addData("thisisId","first data")
     }
 
 }
