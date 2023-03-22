@@ -122,6 +122,7 @@ class MainActivity : AppCompatActivity() {
     }
     fun demo(view: View){
         RealtimeDatabaseDao.addData("thisisId","first data")
+        RealtimeDatabaseDao.addChildEventListener(this)
     }
 
 }
