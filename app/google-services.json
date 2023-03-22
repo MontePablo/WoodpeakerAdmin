@@ -1,95 +1,33 @@
 {
   "project_info": {
-    "project_number": "427980564613",
-    "firebase_url": "https://woodpeaker-39311-default-rtdb.asia-southeast1.firebasedatabase.app",
-    "project_id": "woodpeaker-39311",
-    "storage_bucket": "woodpeaker-39311.appspot.com"
+    "project_number": "137736757931",
+    "project_id": "woodpeaker-93510",
+    "storage_bucket": "woodpeaker-93510.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:427980564613:android:ae914af47869c28e5d61ec",
-        "android_client_info": {
-          "package_name": "com.example.woodpeaker"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "427980564613-8hg0ni7c2lhs41t6blsl01quas9nknfj.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.woodpeaker",
-            "certificate_hash": "bb308173c95ca6952490dde7f26d6ed7ff4bcbae"
-          }
-        },
-        {
-          "client_id": "427980564613-m2cqi122fsvjlmhch88ga9k7q0613tar.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.woodpeaker",
-            "certificate_hash": "bebe2d440a11a8c256d89afff100428b99e14277"
-          }
-        },
-        {
-          "client_id": "427980564613-c5hp7hrbjhpo0r7jl37ufelpv1ufh8p8.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyACkBSuHL3XLmJsNQnVERPY3v_7ELRANgg"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "427980564613-29t7b799ekh4rd7blf1b22h7nnja030s.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:427980564613:android:640b521156aa35da5d61ec",
+        "mobilesdk_app_id": "1:137736757931:android:228d553e52425e5d788dee",
         "android_client_info": {
           "package_name": "com.example.woodpeakeradmin"
         }
       },
       "oauth_client": [
         {
-          "client_id": "427980564613-em81qigg78eop9e8ejsa3484nmdo3er0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.woodpeakeradmin",
-            "certificate_hash": "bebe2d440a11a8c256d89afff100428b99e14277"
-          }
-        },
-        {
-          "client_id": "427980564613-g1873gsbugol8s5od4437jnsmn9m5jp2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.woodpeakeradmin",
-            "certificate_hash": "bb308173c95ca6952490dde7f26d6ed7ff4bcbae"
-          }
-        },
-        {
-          "client_id": "427980564613-c5hp7hrbjhpo0r7jl37ufelpv1ufh8p8.apps.googleusercontent.com",
+          "client_id": "137736757931-srrn7nngho0deob4vdrmqgoeeo94pnq9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyACkBSuHL3XLmJsNQnVERPY3v_7ELRANgg"
+          "current_key": "AIzaSyBAwVqqbf-BSpobxe3FUkToOlF8Ej34bGc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "427980564613-29t7b799ekh4rd7blf1b22h7nnja030s.apps.googleusercontent.com",
+              "client_id": "137736757931-srrn7nngho0deob4vdrmqgoeeo94pnq9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
