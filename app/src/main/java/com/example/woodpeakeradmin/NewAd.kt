@@ -56,6 +56,7 @@ class NewAd : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     var featureArray=ArrayList<CustomviewFeaturesBinding>()
     var imageViewTable:Hashtable<Int,CustomviewImageBinding> = Hashtable<Int,CustomviewImageBinding>()
     var productShape=""
+    var orderPublished=false
     var addonTable=Hashtable<String,CustomviewAddonBinding>()
     lateinit var currentImageLayout:LinearLayout
 
@@ -90,23 +91,28 @@ class NewAd : AppCompatActivity(), AdapterView.OnItemSelectedListener {
     }
 
     fun deleteImagesFromCloud(link:String){
-        if(link.isNotBlank()){
-            StorageDao.deleteProductImage(link).addOnFailureListener {
-                Log.d("TAG", "Delete failed:${it.localizedMessage}")
-            }
-        }else {
-            for (f in imageViewTable) {
-                StorageDao.deleteProductImage(f.value.storeName.text.toString())
-                    .addOnFailureListener {
-                        Log.d("TAG", "Delete failed:${it.localizedMessage}")
-                    }
+        if(!orderPublished) {
+            if (link.isNotBlank()) {
+                StorageDao.deleteProductImage(link).addOnFailureListener {
+                    Log.d("TAG", "Delete failed:${it.localizedMessage}")
+                }
+            } else {
+                for (f in imageViewTable) {
+                    StorageDao.deleteProductImage(f.value.storeName.text.toString())
+                        .addOnFailureListener {
+                            Log.d("TAG", "Delete failed:${it.localizedMessage}")
+                        }
+                }
             }
         }
     }
     fun delete3dModelFromCloud(){
-        if(model3dname.isNotBlank()){
-            StorageDao.deleteProductModel(model3dname).addOnFailureListener {
-                Log.d("TAG", "Delete failed:${it.localizedMessage}")
+        if(!orderPublished) {
+
+            if (model3dname.isNotBlank()) {
+                StorageDao.deleteProductModel(model3dname).addOnFailureListener {
+                    Log.d("TAG", "Delete failed:${it.localizedMessage}")
+                }
             }
         }
     }
@@ -167,6 +173,7 @@ class NewAd : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 //                        finish()
         }.addOnFailureListener { Log.d("TAG","productUpload failed:${it.localizedMessage}");Toast.makeText(this,"failed! retry later",
                 Toast.LENGTH_SHORT).show()}
+        orderPublished=true
     }
     fun colorBtnPress(col:String){
         when(col){
@@ -387,8 +394,10 @@ class NewAd : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        deleteImagesFromCloud("")
-        delete3dModelFromCloud()
+        if(!orderPublished) {
+            deleteImagesFromCloud("")
+            delete3dModelFromCloud()
+        }
     }
 
 
