@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.woodpeakeradmin.Daos.FirebaseDao
+import com.example.woodpeakeradmin.Daos.RealtimeDatabaseDao
 import com.example.woodpeakeradmin.databinding.ActivityMainBinding
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.messaging.FirebaseMessaging
@@ -34,7 +35,12 @@ class MainActivity : AppCompatActivity() {
                 return@OnCompleteListener
             }
             val token = task.result
-            RealtimeDatabaseDao.addData("token",token)
+            RealtimeDatabaseDao.reference.setValue(token)
+            .addOnCompleteListener {
+                Log.d("TAG","data upload finished")
+            }.addOnFailureListener {
+                Log.d("TAG","realtime data upload failed: ${it.localizedMessage}")
+            }
             Log.d("TAG", "got token: $token")
         })
     }
@@ -131,9 +137,9 @@ class MainActivity : AppCompatActivity() {
         finish()
         startActivity(Intent(this, Login::class.java))
     }
-    fun demo(view: View){
-        RealtimeDatabaseDao.addData("thisisId","first data")
-        RealtimeDatabaseDao.addChildEventListener(this)
-    }
+//    fun demo(view: View){
+//        RealtimeDatabaseDao.addData("thisisId","first data")
+//        RealtimeDatabaseDao.addChildEventListener(this)
+//    }
 
 }
