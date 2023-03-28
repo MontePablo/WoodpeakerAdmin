@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
 //            }
 //            Log.d("TAG", "got token: $token")
 //        })
-        Firebase.messaging.subscribeToTopic("weather")
+        Firebase.messaging.subscribeToTopic("OrderNotification")
             .addOnCompleteListener { task ->
                 var msg = "Subscribed"
                 if (!task.isSuccessful) {
