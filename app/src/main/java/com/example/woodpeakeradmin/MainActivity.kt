@@ -11,6 +11,7 @@ import android.os.Environment
 import android.provider.Settings
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -18,7 +19,9 @@ import com.example.woodpeakeradmin.Daos.FirebaseDao
 import com.example.woodpeakeradmin.Daos.RealtimeDatabaseDao
 import com.example.woodpeakeradmin.databinding.ActivityMainBinding
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.FirebaseMessaging
+import com.google.firebase.messaging.ktx.messaging
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding:ActivityMainBinding
@@ -29,20 +32,30 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         permission()
 
-        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
-            if (!task.isSuccessful) {
-                Log.w("TAG", "Fetching FCM registration token failed", task.exception)
-                return@OnCompleteListener
+//        FirebaseMessaging.getInstance().token.addOnCompleteListener(OnCompleteListener { task ->
+//            if (!task.isSuccessful) {
+//                Log.w("TAG", "Fetching FCM registration token failed", task.exception)
+//                return@OnCompleteListener
+//            }
+//            val token = task.result
+//            RealtimeDatabaseDao.reference.setValue(token)
+//            .addOnCompleteListener {
+//                Log.d("TAG","data upload finished")
+//            }.addOnFailureListener {
+//                Log.d("TAG","realtime data upload failed: ${it.localizedMessage}")
+//            }
+//            Log.d("TAG", "got token: $token")
+//        })
+        Firebase.messaging.subscribeToTopic("weather")
+            .addOnCompleteListener { task ->
+                var msg = "Subscribed"
+                if (!task.isSuccessful) {
+                    msg = "Subscribe failed"
+                }
+                Log.d("TAG", msg)
+                Toast.makeText(baseContext, msg, Toast.LENGTH_SHORT).show()
             }
-            val token = task.result
-            RealtimeDatabaseDao.reference.setValue(token)
-            .addOnCompleteListener {
-                Log.d("TAG","data upload finished")
-            }.addOnFailureListener {
-                Log.d("TAG","realtime data upload failed: ${it.localizedMessage}")
-            }
-            Log.d("TAG", "got token: $token")
-        })
+
     }
 
     fun orders(view: View) {
