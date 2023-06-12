@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,29 +18,30 @@
 
 
         <Button
+            android:layout_gravity="center"
             android:id="@+id/newad"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:onClick="newAd"
             android:text="new ad" />
 
         <Button
+            android:layout_gravity="center"
             android:id="@+id/orders"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:onClick="orders"
             android:text="orders" />
 
         <Button
+            android:layout_gravity="center"
             android:id="@+id/allads"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:onClick="allAds"
             android:text="all ads" />
         <Button
+            android:layout_gravity="center"
             android:onClick="logout"
             android:id="@+id/logout"
             android:layout_width="wrap_content"
